@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Basic A-Frame Scene with GLB Model</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <!-- Asset management system to preload the GLB file -->
+      <a-assets>
+        <a-asset-item id="treeModel" src="flower_bush_tree_royalty_free.glb"></a-asset-item>
+      </a-assets>
+
+      <!-- GLB Model -->
+      <a-gltf-model src="#treeModel" position="0 0 -3" scale="1 1 1" rotation="0 45 0"></a-gltf-model>
+
+      <!-- Ground plane -->
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+
+      <!-- Sky -->
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
